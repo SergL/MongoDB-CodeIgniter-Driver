@@ -453,7 +453,7 @@ class Mongo_db {
 	 		show_error("Nothing to insert into Mongo collection or insert is not an array", 500);
 	 	
 	 	try {
-	 		$this->db->{$collection}->insert($insert, array('safe' => TRUE));
+	 		$insert = $this->db->{$collection}->insert($data, array('safe' => TRUE));
 	 		if(isset($insert['_id']))
 	 			return($insert['_id']);
 	 		else
