@@ -606,7 +606,7 @@ class Mongo_db {
 	 *	@usage = $this->mongo_db->remove_index($collection, array('first_name' => 'ASC', 'last_name' => -1));
 	 */
 	
-	public function remove_index($collection = "", $keys = array()) {
+	public function remove_index($collection = "", $keys = array(), $options=array()) {
 		if(empty($collection))
 	 		show_error("No Mongo collection specified to remove index from", 500);
 	 	if(empty($keys) || !is_array($keys))
